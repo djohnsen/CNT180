@@ -6,6 +6,13 @@ speed = float(input())
 if 24 <= speed <= 56: print("Speed is normal")
 else: print("Speed is abnormal")
 
+# as a case statement because that came to mind
+match speed:
+    case num if 24 <= speed <= 56:  #Really didn't save much but maybe this lays out better in some use cases
+        print("Speed is normal")
+    case _:
+        print("Speed is abnormal")
+
 # 2. Running on a particular treadmill you burn 4.2 calories per minute. Write a program that uses a loop to display
 #    the number of calories burned after 10, 15, 20, 25, and 30 minutes.
 #
