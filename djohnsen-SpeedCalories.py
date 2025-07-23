@@ -57,6 +57,6 @@ match speed:
 #    the number of calories burned after 10, 15, 20, 25, and 30 minutes.
 #
 calBurnRate = 4.2
-for i in [10,15,20,25,30]:
-    print("The treadmill time is", i, "minutes and", i * calBurnRate, "calories have been burned.")
+for minute in [10,15,20,25,30]:
+    print("The treadmill time is", minute, "minutes and", minute * calBurnRate, "calories have been burned.")
     pass
