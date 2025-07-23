@@ -1,1 +1,1 @@
-# CNT180 - djohnsen MPG program
+# CNT180 - djohnsen class programs
