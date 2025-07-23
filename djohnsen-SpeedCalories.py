@@ -13,6 +13,46 @@ match speed:
     case _:
         print("Speed is abnormal")
 
+
+# some extended possibilities that came up when searching for how to use the (fairly new to Python) case construction
+# (I have programmed in other languages, recently Ruby, where that was an available branching construct.
+
+# Construct #1
+#
+# We define an associative array (hash) with keys of (a number range) and values (a or b)
+# We remap as a number the 'rng' value, walk the items in the 'cases' hash for each num in 'rng'
+# bit fuzzy on that part
+#
+# cases = {range(1, 21): 'a',
+#          range(21, 31): 'b'
+#         }
+# switch = {num: value for rng, value in cases.items() for num in rng}
+
+
+# Construct #2
+#
+# I appreciate that we are defining a new object with the class statement, of type dict (thing to learn about)
+# I think that the deal is that it executes an inbuilt function across its own data structure (the hash) when addressed for a key
+# The inbuilt function is performing the correct de-referencing of the range we're trying to get into, and returning the value
+# stored at that hash key (or an error if out of range)
+# I am a little unclear on how the hash is being correctly addressed and assigned in this operation
+#
+# #
+# class Switch(dict):
+#     def __getitem__(self, item):
+#         for key in self.keys():                 # iterate over the intervals
+#             if item in key:                     # if the argument is in that interval
+#                 return super().__getitem__(key) # return its associated value
+#         raise KeyError(item)                    # if not in any interval, raise KeyError
+#
+# switch = Switch({
+#     range(1, 21): 'a',
+#     range(21, 31): 'b'
+# })
+
+
+
+
 # 2. Running on a particular treadmill you burn 4.2 calories per minute. Write a program that uses a loop to display
 #    the number of calories burned after 10, 15, 20, 25, and 30 minutes.
 #
