@@ -14,3 +14,4 @@ for element in listA :
         listMin = element
 
 print("The list maximum is:", listMax,"and the list minimum is:",  listMin)
+
